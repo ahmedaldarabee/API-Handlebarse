@@ -1,0 +1,18 @@
+[
+    {
+        "name":"ahmed nayel al darabee",
+        "image":"img-1",
+        "house" : "jordan-amman",
+        "major" : "software engineering"
+    },{
+        "name":"mohammed nayel al darabee",
+        "image":"img-2",
+        "house" : "jordan-amman",
+        "major" : "software engineering"
+    },{
+        "name":"mousa khaleel",
+        "image":"img-3",
+        "house" : "jordan-amman",
+        "major" : "software engineering"
+    }
+]

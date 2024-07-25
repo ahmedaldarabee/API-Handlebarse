@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handlebars API </title>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        img {
+            width: 250px;
+        }
+
+        .chars-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        ::selection {
+            background-color: #333;
+            color: white;
+        }
+        
+        .changeColor {
+            color: red;
+        }
+
+        .hiddenImage {
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+<body>
+   
+    <!-- L6 type="text/x-handlebars-template" This is important section -->
+    <script id="charTemplate" type="text/x-handlebars-template">
+        {{#each characters}}
+            <div class="character">
+                <img src="images/{{image}}.png" class="{{#isIndex @index 1}}hiddenImage{{/isIndex}}"/>
+                <h2>data content</h2>
+                <h3 class="{{#isIndex @index 1}}changeColor{{/isIndex}}">
+                    Actor : {{name}}
+                </h3>
+                <p>House  : {{house}}</p>
+                <p>Major  : {{major}}</p>
+            </div> 
+        {{/each}}
+    </script>
+
+    <div class="chars-container"></div>
+    
+</body>
+    <script src="handlebarseLogic.js"></script>
+</html>
